@@ -1,0 +1,67 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+{{ request.user.id|json_script:"user_id" }}
+<div class="twitter" id="new-post">
+    <div class="container-fluid" id="new-post-container">
+        <div class="card" id="new-post-card">
+            <form method="post" id="new-post-form">
+                <div class="row" id="new-post-form-row">
+                    {% csrf_token %}
+                      {{ form }}
+                </div>
+                <div class="row" id="new-post-button-row">
+                    <button type="button" class="btn btn-primary" id="new-post-button">New Post</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="twitter" id="user-info">
+    <div class="container-fluid" id="user-info-container">
+        <div class="card" id="user-info-card">
+            <div class="row" id="username-row">
+                <div class="col" id ='username-col'></div>
+            </div>
+            <div class="row" id="user-follow-row">
+                <div class="col" id="followers-count">display followers count</div>
+                <div class="col" id="following-count">display following count</div>
+                {% if user.is_authenticated %}
+                    <button button type="button" class="btn btn-primary" id="follow-button">follow</button>
+                    <button button type="button" class="btn btn-primary" id="unfollow-button">unfollow</button>
+                {% endif %}
+            </div>
+        </div>
+        <div class="container-fluid" id="user-only-posts"></div>
+    </div>
+</div>
+<div class="twitter" id="posts">
+    <div class="container-fluid" id="posts-container">
+    </div>
+    <nav aria-label="...">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+</div>
+<div id="reply-form-index-div">
+    <div class="card" id="reply-card">
+        <form method="post" id="reply-form">
+            <div class="row" id="reply-form-row">
+                {% csrf_token %}
+                  {{ reply }}
+            </div>
+            <div class="row" id="reply-button-row">
+                
+            </div>
+        </form>
+    </div>
+</div>
+   
+    
+{% endblock %}

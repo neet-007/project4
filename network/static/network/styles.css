@@ -1,0 +1,80 @@
+#new-post-card{
+    padding: 20px;
+    font-weight: bold;
+}
+#new-post-button-row{
+    position: relative;
+    margin-top: 10px;
+}
+.list-group-item{
+    margin-top: 10px;
+}
+.user-name-class{
+    font-size: 20px;
+    font-weight: bold;
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+}
+.user-name-class:hover{
+    color: darkgray;
+}
+.post-content-class{
+    font-size: 20px;
+}
+.unlike-class{
+    color: #FF0000;
+    transition: ease-in-out;
+}
+.unlike-class:hover{
+    font-size: 110%;
+    transform: translateY(10px);
+    color: #FF9393;
+}
+.like-class{
+    transition: ease-in-out;
+}
+.like-class:hover{
+    font-size: 110%;
+    transform: translateY(10px);
+    color:blue;
+}
+.edit-button-class{
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+}
+.edit-button-class:hover{
+    color: dodgerblue;
+}
+#user-info-card{
+    padding: 10px 20px;
+}
+#username-col{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#followers-count{
+    font-weight: bold;
+}
+#following-count{
+    font-weight: bold;
+}
+.reply-button-class{
+    padding: 0px 13px;
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+}
+.reply-button-class:hover{
+    color: dodgerblue;
+}
+textarea{
+    width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
